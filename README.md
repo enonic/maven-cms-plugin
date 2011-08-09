@@ -38,6 +38,11 @@ Also, you need to configure the actual maven plugin:
 All runtime dependencies are automatically packaged into your resulting jar file (inside META-INF/lib). If you do
 not want to package certain dependencies into the jar, just set the scope of that dependency to 'provided'.
 
+## Example
+
+For a complete example of using this, please refer to the
+[Example plugin](https://github.com/enonic/cms-example-plugin).
+
 ## License
 
 This software is licensed under AGPL 3.0 license.
