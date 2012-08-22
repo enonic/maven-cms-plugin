@@ -1,84 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
 
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.enonic.pom</groupId>
-        <artifactId>base</artifactId>
-        <version>4</version>
-    </parent>
+  <groupId>com.enonic.cms.tools</groupId>
+  <artifactId>maven-cms-plugin</artifactId>
+  <version>1.0.1</version>
+  <packaging>maven-plugin</packaging>
+  <name>Maven CMS Plugin</name>
 
-    <groupId>com.enonic.cms.tools</groupId>
-    <artifactId>maven-cms-plugin</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
-    <packaging>maven-plugin</packaging>
-    <name>Maven CMS Plugin</name>
+  <licenses>
+    <license>
+      <name>AGPL 3.0</name>
+      <url>http://www.gnu.org/licenses/agpl-3.0.txt</url>
+    </license>
+  </licenses>
 
-    <licenses>
-        <license>
-            <name>AGPL 3.0</name>
-            <url>http://www.gnu.org/licenses/agpl-3.0.txt</url>
-        </license>
-    </licenses>
+  <properties>
+    <mavenVersion>2.0.9</mavenVersion>
+  </properties>
 
-    <properties>
-        <mavenVersion>2.0.9</mavenVersion>
-    </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>2.7</version>
+        <configuration>
+          <goalPrefix>cms</goalPrefix>
+        </configuration>
+        <executions>
+          <execution>
+            <id>generated-helpmojo</id>
+            <goals>
+              <goal>helpmojo</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-plugin-plugin</artifactId>
-                <version>2.7</version>
-                <configuration>
-                    <goalPrefix>cms</goalPrefix>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>generated-helpmojo</id>
-                        <goals>
-                            <goal>helpmojo</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-model</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-artifact</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-project</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-archiver</artifactId>
+      <version>2.4.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.shared</groupId>
+      <artifactId>maven-osgi</artifactId>
+      <version>0.2.0</version>
+    </dependency>
+  </dependencies>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-plugin-api</artifactId>
-            <version>${mavenVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-model</artifactId>
-            <version>${mavenVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-artifact</artifactId>
-            <version>${mavenVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-project</artifactId>
-            <version>${mavenVersion}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven</groupId>
-            <artifactId>maven-archiver</artifactId>
-            <version>2.4.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.shared</groupId>
-            <artifactId>maven-osgi</artifactId>
-            <version>0.2.0</version>
-        </dependency>
-    </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>enonic.internal</id>
+      <url>http://leela.enonic/artifactory/public</url>
+    </repository>
+  </distributionManagement>
 
 </project>
 

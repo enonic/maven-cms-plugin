@@ -174,6 +174,10 @@ public final class PackagePluginMojo
                 continue;
             }
 
+            if (artifact.isOptional()) {
+                continue;
+            }
+
             result.add(artifact);
         }
 

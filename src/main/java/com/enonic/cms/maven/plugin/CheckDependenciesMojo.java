@@ -38,8 +38,8 @@ public final class CheckDependenciesMojo
     protected void doExecute()
         throws Exception
     {
-        checkDependencies(SHOULD_BE_PROVIDED, "The following dependencies should be excluded or "
-                    + "be declared with scope 'provided':");
+        checkDependencies(SHOULD_BE_PROVIDED, "The following dependencies should be excluded,  "
+                    + "be declared with scope 'provided' or set with optional flag:");
     }
 
     private void checkDependencies(final List<String> set, final String message)

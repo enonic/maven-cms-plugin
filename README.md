@@ -27,7 +27,7 @@ Also, you need to configure the actual maven plugin:
             <plugin>
                 <groupId>com.enonic.cms.tools</groupId>
                 <artifactId>maven-cms-plugin</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.1</version>
                 <extensions>true</extensions>
             </plugin>
         </plugins>
