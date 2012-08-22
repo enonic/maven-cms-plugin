@@ -171,11 +171,10 @@ public abstract class AbstractPluginMojo
         final ScopeArtifactFilter filter = new ScopeArtifactFilter(Artifact.SCOPE_RUNTIME);
 
         for (final Artifact artifact : artifacts) {
-            if (filter.include(artifact)) {
+            if (filter.include(artifact) && !artifact.isOptional()) {
                 result.add(artifact);
             }
         }
-
 
         return result;
     }
