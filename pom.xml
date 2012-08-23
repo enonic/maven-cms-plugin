@@ -77,7 +77,7 @@
   <distributionManagement>
     <repository>
       <id>enonic.internal</id>
-      <url>http://leela.enonic/artifactory/public</url>
+      <url>http://repo.enonic.net/artifactory/public</url>
     </repository>
   </distributionManagement>
 
