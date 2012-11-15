@@ -45,7 +45,7 @@ For a complete example of using this, please refer to the
 
 ## License
 
-This software is licensed under AGPL 3.0 license.
+This software is licensed under Apache 2.0 license.
 
     Licensed to the Apache Software Foundation (ASF) under one
     or more contributor license agreements.  See the NOTICE file
