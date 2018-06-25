@@ -10,7 +10,7 @@ First thing is to set up a maven plugin repository to be able to access the plug
     <pluginRepositories>
         <pluginRepository>
             <id>enonic</id>
-            <url>http://repo.enonic.com/maven</url>
+            <url>http://repo.enonic.com/public</url>
         </pluginRepository>
     </pluginRepositories>
 
